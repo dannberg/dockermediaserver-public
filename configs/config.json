@@ -1,0 +1,29 @@
+#this is the config file for homebridge
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "MACADDRESS",
+        "port": 51826,
+        "pin": "000-00-000"
+    },
+    "description": "This is an example configuration file. You can use this as a template for creating your own configuration file containing devices you actually own.",
+    "accessories": [],
+    "platforms": [
+        {
+            "platform": "TplinkSmarthome",
+            "name": "TplinkSmarthome"
+        },
+        {
+            "platform": "DysonPlatform",
+            "name": "DysonPlatform",
+            "accessories": [
+                {
+                    "ip": "192.168.1.8",
+                    "displayName": "Dyson",
+                    "serialNumber": "DYSON-000-00-00000000-000",
+                    "password": "dysonpassword"
+                }
+            ]
+        }
+    ]
+}

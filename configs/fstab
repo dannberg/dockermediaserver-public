@@ -1,0 +1,17 @@
+# This is the linux server fstab file, with the line for connecting to a Synology NAS.
+# You can edit this file with the command:
+# $ nano /etc/fstab
+
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda1 during installation
+UUID=d26fe9fb-9a9e-4b4b-bfe9-d63440da5bb6 /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sda5 during installation
+UUID=f4c619a7-a4ba-430c-903d-7ce53f79011a none            swap    sw              0       0
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+192.168.1.17:/volume1/Media /mnt/nas/ nfs rw,hard,intr 0 0
